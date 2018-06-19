@@ -23,11 +23,23 @@ const hbs = require('express-hbs');
 const http = require('http');
 const pkg = require('./package.json');
 
+// Authentication module.
+var auth = require('http-auth');
+
 module.exports = initApp;
 
 // Initialise the application
 function initApp(config, callback) {
 	config = defaultConfig(config);
+
+    var basic = auth.basic({
+            realm: "Simon Area."
+        }, (username, password, callback) => {
+            // Custom authentication
+            // Use callback(error) if you want to throw async error.
+            callback(username === config.username && password === config.password);
+        }
+    );
 
 	let webserviceUrl = config.webservice;
 	if (typeof webserviceUrl === 'object') {
@@ -53,6 +65,8 @@ function initApp(config, callback) {
 	app.express.use(bodyParser.urlencoded({
 		extended: true
 	}));
+
+    app.express.use(auth.connect(basic));
 
 	// View engine
 	app.express.engine('html', hbs.express4({
