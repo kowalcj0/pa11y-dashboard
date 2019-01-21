@@ -12,7 +12,7 @@ Pa11y Dashboard is a web interface to the [Pa11y][pa11y] accessibility reporter;
 
 ## Latest news from Pa11y
 
-✨ 🔜 ✨ The Pa11y team is very excited to announce plans for the successor to Pa11y Dashboard and Pa11y Webservice, codename "Sidekick". Help us define the features that you want to see by visiting the [proposal][sidekick-proposal]. ✨  
+✨ 🔜 ✨ The Pa11y team is very excited to announce plans for the successor to Pa11y Dashboard and Pa11y Webservice, codename "Sidekick". Help us define the features that you want to see by visiting the [proposal][sidekick-proposal]. ✨
 
 ---
 
@@ -26,7 +26,7 @@ Setup
 
 Pa11y Dashboard requires [Node.js][node] 4+. See the [Pa11y][pa11y] documentation for detailed instructions on how to install this on your operating system.
 
-You'll also need to have [MongoDB][mongo] installed and running. See the [MongoDB install guide][mongo-install] for more information on this.
+You'll also need to have [MongoDB][mongo] installed and running. For quick access, you can install via a package manager such as on Mac OS `brew install mongodb` or on Linux (Debian) it would be `apt-get install mongodb`. To run MongoDB, you can run `mongod` in the command line. See the [MongoDB install guide][mongo-install] for more detailed information.
 
 You'll then need to clone this repo locally and install dependencies with `npm install`. Now you need to add some configuration before you can run the application. We can do this in two ways:
 
@@ -156,5 +156,5 @@ Copyright &copy; 2013–2017, Team Pa11y
 [info-build]: https://travis-ci.org/pa11y/pa11y-dashboard
 [shield-license]: https://img.shields.io/badge/license-GPL%203.0-blue.svg
 [shield-node]: https://img.shields.io/badge/node.js%20support-4–6-brightgreen.svg
-[shield-version]: https://img.shields.io/badge/version-2.4.1-blue.svg
+[shield-version]: https://img.shields.io/badge/version-2.4.2-blue.svg
 [shield-build]: https://img.shields.io/travis/pa11y/pa11y-dashboard/master.svg
