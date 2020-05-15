@@ -1,6 +1,27 @@
 
 # Changelog
 
+## 3.1.0 (2019-09-27)
+
+  * Display the task ID before each line of output, so it's clear to which task a line of output belongs to when they run in parallel.
+  * Bump pa11y-webservice version, which fixes an issue with some pages failing to run.
+  * Fix incorrect routes passing an invalid value to Mongo's ObjectID.
+
+## 3.0.0 (2019-07-16)
+
+  * Update pa11y to v5, which replaces Phantomjs with Headless Chrome
+  * Update dependencies
+  * Several bug fixes and documentation updates
+  * See the [migration guide](https://github.com/pa11y/pa11y-dashboard/blob/master/MIGRATION.md#migrating-from-20-to-30) for details of the breaking changes in this release
+
+## 2.4.2 (2018-06-21)
+
+  * Update dependencies
+    * body-parser: ~1.17.1 to ^1.18.3
+    * compression: ~1.6 to ^1.7.2
+    * express: ~4.15.2 to ^4.16.3
+    * moment: ~2.15.2 to ^2.22.2
+
 ## 2.4.1 (2017-11-28)
 
   * Update dependencies
