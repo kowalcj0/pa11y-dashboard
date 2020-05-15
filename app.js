@@ -23,8 +23,9 @@ const hbs = require('express-hbs');
 const http = require('http');
 const pkg = require('./package.json');
 
-// Authentication module.
-var auth = require('http-auth');
+// Authentication modules
+const auth = require('http-auth');
+const authConnect = require('http-auth-connect');
 
 module.exports = initApp;
 
@@ -32,7 +33,7 @@ module.exports = initApp;
 function initApp(config, callback) {
 	config = defaultConfig(config);
 
-    var basic = auth.basic({
+    const basic = auth.basic({
             realm: "Simon Area."
         }, (username, password, callback) => {
             // Custom authentication
@@ -66,7 +67,9 @@ function initApp(config, callback) {
 		extended: true
 	}));
 
-    app.express.use(auth.connect(basic));
+    // add authentication module to app
+    // https://github.com/http-auth/http-auth/issues/98
+    app.express.use(authConnect(basic));
 
 	// View engine
 	app.express.engine('html', hbs.express4({
