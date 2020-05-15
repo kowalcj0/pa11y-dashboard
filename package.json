@@ -1,6 +1,6 @@
 {
   "name": "pa11y-dashboard",
-  "version": "2.4.2",
+  "version": "3.1.0",
   "private": true,
   "description": "Pa11y Dashboard is a visual web interface to the Pa11y accessibility reporter",
   "keywords": [
@@ -21,32 +21,31 @@
   "bugs": "https://github.com/pa11y/dashboard/issues",
   "license": "GPL-3.0",
   "engines": {
-    "node": ">=4"
+    "node": ">=8",
+    "npm": ">=6"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "chalk": "~1.1",
-    "compression": "^1.7.2",
-    "express": "^4.16.3",
-    "express-hbs": "~1.0",
-    "http-auth": "^3.2.3",
-    "http-headers": "^3.0.1",
-    "moment": "^2.22.2",
-    "npm": "^6.1.0",
-    "pa11y-webservice": "^2.3.1",
-    "pa11y-webservice-client-node": "^1.2.1",
-    "underscore": "~1.8"
+    "body-parser": "~1.19.0",
+    "chalk": "~2.4.2",
+    "compression": "~1.7.4",
+    "express-hbs": "~2.1.2",
+    "express": "~4.17.1",
+    "http-headers": "~3.0.2",
+    "moment": "~2.24.0",
+    "pa11y-webservice-client-node": "~2.0.0",
+    "pa11y-webservice": "~3.1.2",
+    "underscore": "~1.9.1"
   },
   "devDependencies": {
-    "bower": "~1.7",
-    "cheerio": "~0.20",
-    "eslint": "^3.18.0",
-    "less": "~2.7",
-    "mocha": "^2",
-    "pa11y-lint-config": "^1.0.0",
-    "proclaim": "^3",
-    "request": "^2.74",
-    "uglify-js": "~2.6"
+    "bower": "^1.8.8",
+    "cheerio": "^1.0.0-rc.3",
+    "eslint": "^6.8.0",
+    "less": "^3.11.1",
+    "mocha": "^7.1.1",
+    "pa11y-lint-config": "^1.2.1",
+    "proclaim": "^3.6.0",
+    "request": "^2.88.2",
+    "uglify-js": "^3.9.1"
   },
   "scripts": {
     "start": "node index.js",
