@@ -30,6 +30,7 @@
     "compression": "~1.7.4",
     "express-hbs": "~2.1.2",
     "express": "~4.17.1",
+    "express-http-proxy": "^1.6.0",
     "http-auth": "^4.1.2",
     "http-auth-connect": "^1.0.4",
     "http-headers": "~3.0.2",

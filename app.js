@@ -27,6 +27,9 @@ const pkg = require('./package.json');
 const auth = require('http-auth');
 const authConnect = require('http-auth-connect');
 
+// Initialize proxy module
+const proxy = require('express-http-proxy');
+
 module.exports = initApp;
 
 // Initialise the application
@@ -67,9 +70,12 @@ function initApp(config, callback) {
 		extended: true
 	}));
 
-    // add authentication module to app
-    // https://github.com/http-auth/http-auth/issues/98
+    // Add authentication module to the app. See https://github.com/http-auth/http-auth/issues/98
     app.express.use(authConnect(basic));
+
+	// Proxy requests to WebService
+	// It will use the same basic auth credentials as all other endpoints
+	app.express.use('/ws/', proxy(webserviceUrl));
 
 	// View engine
 	app.express.engine('html', hbs.express4({
